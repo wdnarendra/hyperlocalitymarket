@@ -95,7 +95,7 @@ catch{
                     const user = verifyjson(fields.jsonwebtoken)
                     if (user) {
                         let oldpath = files.file.filepath
-                        let newpath = 'C:/Users/Narendra/Desktop/blog/hyperlocalitymarket/images/' + files.file.originalFilename
+                        let newpath = 'C:/Users/Narendra/Desktop/blog/hyperlocalitymarket/filessss/' + files.file.originalFilename
                         fs.rename(oldpath, newpath, (err) => {
                             if (!err) { }
                             // console.log("files upload and post created successfully")
