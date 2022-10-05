@@ -1,0 +1,19 @@
+{
+  "name": "hyperlocalitymarket",
+  "version": "1.0.0",
+  "description": "hyperlocalitymarket server code",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "formidable": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "nedb": "^1.8.0"
+  }
+}
