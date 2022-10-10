@@ -5,6 +5,17 @@ import PhoneInput from "react-native-phone-number-input";
 import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
+  async function otpcall()
+  { 
+    const options ={
+            method:'POST',
+            header:{
+                'Content-Type':'application/json',
+            },
+            body:JSON.stringify({"phonenumber":phoneNumber})
+        }
+       await fetch('otpapi',options).then(res=>res.json()).then(data=>{})
+  }
   const navigation = useNavigation();
   const [phoneNumber, setphoneNumber] = useState("");
   const [checked, setChecked] = React.useState(false);
@@ -52,7 +63,9 @@ const Login = () => {
           <Button
             style={styles.buttonStyle}
             title="CONTINUE"
-            onPress={() => navigation.navigate("Login2")}
+            onPress={() => 
+            { otpcall();
+              navigation.navigate("Login2")}}
           />
         </View>
       </View>
